@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/time"
+        android:title="시간표"
+        android:icon="@drawable/ballot"/>
+    <item android:id="@+id/exit"
+        android:title="출구 정보"
+        android:icon="@drawable/exit"/>
+    <item android:id="@+id/information"
+        android:title="역 정보"
+        android:icon="@drawable/home"/>
+    <item android:id="@+id/favorite"
+        android:title="즐겨찾기"
+        android:icon="@drawable/star"/>
+
+</menu>

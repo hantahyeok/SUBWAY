@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/fragment1Activity"
+        android:title="지하철"
+        android:icon="@drawable/subway" />
+    <item
+        android:id="@+id/fragment2Activity"
+        android:title="즐겨찾기"
+        android:icon="@drawable/star"/>
+    <item
+        android:id="@+id/fragment3Activity"
+        android:title="게시글"
+        android:icon="@drawable/comments"/>
+    <item
+        android:id="@+id/fragment4Activity"
+        android:title="설정"
+        android:icon="@drawable/settings"/>
+
+</menu>
