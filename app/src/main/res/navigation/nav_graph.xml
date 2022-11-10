@@ -3,26 +3,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/fragment1Activity">
+    app:startDestination="@id/fragment1Activity"
+    >
 
     <fragment
         android:id="@+id/fragment1Activity"
         android:name="com.hde.subway.Fragment1"
-        tools:layout="@layout/activity_fragment1"/>
+        tools:layout="@layout/fragment_1"/>
 
     <fragment
         android:id="@+id/fragment2Activity"
         android:name="com.hde.subway.Fragment2"
-        tools:layout="@layout/activity_fragment2"/>
+        tools:layout="@layout/fragment_2"/>
 
     <fragment
         android:id="@+id/fragment3Activity"
         android:name="com.hde.subway.Fragment3"
-        tools:layout="@layout/activity_fragment3"/>
+        tools:layout="@layout/fragment_3"/>
 
     <fragment
         android:id="@+id/fragment4Activity"
         android:name="com.hde.subway.Fragment4"
-        tools:layout="@layout/activity_fragment4"/>
+        tools:layout="@layout/fragment_4"/>
 
 </navigation>

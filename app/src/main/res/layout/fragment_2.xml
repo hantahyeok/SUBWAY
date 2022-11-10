@@ -6,9 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".Fragment2">
 
-    <TextView
+    <Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="2"/>
+        android:background="@color/brand">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="즐겨찾기"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:fontFamily="@font/font"
+            android:gravity="center"/>
+
+    </Toolbar>
 </LinearLayout>

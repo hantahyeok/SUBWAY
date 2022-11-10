@@ -11,8 +11,8 @@
         android:icon="@drawable/star"/>
     <item
         android:id="@+id/fragment3Activity"
-        android:title="게시글"
-        android:icon="@drawable/comments"/>
+        android:title="신고"
+        android:icon="@drawable/siren"/>
     <item
         android:id="@+id/fragment4Activity"
         android:title="설정"

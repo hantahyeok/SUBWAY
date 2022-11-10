@@ -4,16 +4,18 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2" />
+        <entry key="app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.125" />
         <entry key="app/src/main/res/drawable/ic_baseline_close_24.xml" value="0.2" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.2" />
         <entry key="app/src/main/res/drawable/intro_bg.xml" value="0.2225" />
         <entry key="app/src/main/res/drawable/subway_click.xml" value="0.2" />
-        <entry key="app/src/main/res/drawable/subway_click_bg.xml" value="0.2" />
+        <entry key="app/src/main/res/drawable/subway_click_bg.xml" value="0.25" />
         <entry key="app/src/main/res/drawable/tails.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/activity_edit.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_exit.xml" value="0.262037037037037" />
         <entry key="app/src/main/res/layout/activity_fraggment1.xml" value="0.20092592592592592" />
         <entry key="app/src/main/res/layout/activity_fraggment2.xml" value="0.262037037037037" />
-        <entry key="app/src/main/res/layout/activity_fragment1.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_fragment1.xml" value="0.27624309392265195" />
         <entry key="app/src/main/res/layout/activity_fragment2.xml" value="0.3453703703703704" />
         <entry key="app/src/main/res/layout/activity_fragment3.xml" value="0.3453703703703704" />
         <entry key="app/src/main/res/layout/activity_fragment4.xml" value="0.3453703703703704" />
@@ -22,10 +24,12 @@
         <entry key="app/src/main/res/layout/activity_main2.xml" value="0.3388888888888889" />
         <entry key="app/src/main/res/layout/activity_setting.xml" value="0.24381625441696114" />
         <entry key="app/src/main/res/layout/content_activity_exit.xml" value="0.262037037037037" />
+        <entry key="app/src/main/res/layout/fragment_1.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_3.xml" value="0.3453703703703704" />
         <entry key="app/src/main/res/layout/fragment_first.xml" value="0.262037037037037" />
         <entry key="app/src/main/res/layout/fragment_second.xml" value="0.262037037037037" />
         <entry key="app/src/main/res/layout/information.xml" value="0.2611111111111111" />
-        <entry key="app/src/main/res/layout/subway_click.xml" value="0.37741241455078123" />
+        <entry key="app/src/main/res/layout/subway_click.xml" value="0.25" />
         <entry key="app/src/main/res/menu/bnv.xml" value="0.28923076923076924" />
         <entry key="app/src/main/res/menu/click.xml" value="0.2611111111111111" />
         <entry key="app/src/main/res/menu/subway_click.xml" value="0.2611111111111111" />

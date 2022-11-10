@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditActivity">
+
+    <Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/brand">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="게시물"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:fontFamily="@font/font"
+            android:gravity="center"/>
+
+    </Toolbar>
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:src="@drawable/ic_baseline_photo_camera_24" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_explane"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_toRightOf="@id/iv"-->
+<!--        android:layout_marginLeft="16dp"-->
+<!--        android:textSize="24dp"-->
+<!--        android:text="<- 이미지를 첨부하세요"/>-->
+
+</RelativeLayout>

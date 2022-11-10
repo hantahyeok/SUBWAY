@@ -6,17 +6,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.hde.subway.databinding.ActivityFragment3Binding
-import com.hde.subway.databinding.ActivityFragment4Binding
+import com.hde.subway.databinding.Fragment1Binding
+import com.hde.subway.databinding.Fragment4Binding
 
 class Fragment4 : Fragment() {
 
 
-    var mBinding: ActivityFragment4Binding? = null
+    var mBinding: Fragment4Binding? = null
     val binding get() = mBinding!!
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        mBinding = ActivityFragment4Binding.inflate(inflater, container, false)
+        mBinding = Fragment4Binding.inflate(inflater, container, false)
 
         return binding.root
     }
