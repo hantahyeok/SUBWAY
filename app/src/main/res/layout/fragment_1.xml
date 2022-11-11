@@ -23,6 +23,6 @@
         android:id="@+id/pv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/naver_subway" />
+        android:src="@drawable/naver_subway"/>
 
 </LinearLayout>
