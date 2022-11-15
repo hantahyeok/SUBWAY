@@ -102,11 +102,12 @@ class Fragment1 : Fragment(){
                         }
                     }
                 }
-                Log.i("hhh", distance.toString())
                 if(minimum < 100.0){
                     Toast.makeText(requireContext(), "$station", Toast.LENGTH_SHORT).show()
                     //클릭시 말풍선 뜨게 해야됨
                     binding.include.click.visibility=View.VISIBLE
+
+
                 }else{
                     binding.include.click.visibility=View.GONE
                 }

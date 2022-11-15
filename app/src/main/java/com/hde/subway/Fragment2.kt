@@ -11,17 +11,12 @@ import com.hde.subway.databinding.Fragment2Binding
 
 class Fragment2 : Fragment() {
 
-    var mBinding: Fragment2Binding? = null
-    val binding get() = mBinding!!
+    lateinit var binding: Fragment2Binding
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        mBinding = Fragment2Binding.inflate(inflater, container, false)
+        binding = Fragment2Binding.inflate(inflater, container, false)
 
         return binding.root
     }
 
-    override fun onDestroy() {
-        mBinding = null
-        super.onDestroy()
-    }
 }

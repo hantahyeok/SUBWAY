@@ -16,25 +16,25 @@
             android:id="@+id/tb"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:title="왕십리"
-            app:titleMarginStart="190dp"
-            app:titleTextColor="@color/white" />
+            app:navigationIcon="@drawable/ic_baseline_close_24">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="55dp"
+                android:fontFamily="@font/font"
+                android:gravity="center"
+                android:text="왕십리"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+        </androidx.appcompat.widget.Toolbar>
 
         <com.google.android.material.tabs.TabLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/brand"
-            android:layout_marginStart="200dp"/>
+            android:background="@color/brand" />
 
     </com.google.android.material.appbar.AppBarLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
-        android:orientation="vertical"
-        app:spanCount="1"
-        />
 
 </LinearLayout>

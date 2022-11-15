@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EditActivity">
+    tools:context=".EditActivity"
+    >
 
     <Toolbar
         android:layout_width="match_parent"
@@ -23,19 +24,61 @@
 
     </Toolbar>
 
-    <ImageView
-        android:id="@+id/iv"
-        android:layout_width="160dp"
-        android:layout_height="160dp"
-        android:src="@drawable/ic_baseline_photo_camera_24" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
 
-<!--    <TextView-->
-<!--        android:id="@+id/tv_explane"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_toRightOf="@id/iv"-->
-<!--        android:layout_marginLeft="16dp"-->
-<!--        android:textSize="24dp"-->
-<!--        android:text="<- 이미지를 첨부하세요"/>-->
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_marginTop="100dp"
+            android:src="@drawable/ic_baseline_photo_camera_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:layout_toRightOf="@id/iv"
+            android:text="이미지를 첨부하세요"
+            android:textSize="24dp" />
+
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv"
+            android:layout_marginTop="30dp"
+            android:entries="@array/report"
+            android:spinnerMode="dropdown" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spinner"
+            android:layout_marginTop="40dp"
+            android:padding="8dp"
+            android:text="내용"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title"
+            android:hint="글을 작성하세요." />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="작성 완료"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
 
 </RelativeLayout>

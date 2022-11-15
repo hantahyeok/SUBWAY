@@ -19,6 +19,7 @@
         android:padding="8dp">
 
         <LinearLayout
+            android:id="@+id/clock"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -46,6 +47,7 @@
             android:background="@color/black"/>
 
         <LinearLayout
+            android:id="@+id/exit"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -71,6 +73,7 @@
             android:background="@color/black"/>
 
         <LinearLayout
+            android:id="@+id/information"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -96,6 +99,7 @@
             android:background="@color/black"/>
 
         <LinearLayout
+            android:id="@+id/favorite"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"

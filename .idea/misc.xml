@@ -24,13 +24,14 @@
         <entry key="app/src/main/res/layout/activity_main2.xml" value="0.3388888888888889" />
         <entry key="app/src/main/res/layout/activity_setting.xml" value="0.24381625441696114" />
         <entry key="app/src/main/res/layout/activity_subway.xml" value="0.11203703703703703" />
-        <entry key="app/src/main/res/layout/activity_subway_come.xml" value="0.20854887785734966" />
+        <entry key="app/src/main/res/layout/activity_subway_come.xml" value="0.25" />
         <entry key="app/src/main/res/layout/content_activity_exit.xml" value="0.262037037037037" />
         <entry key="app/src/main/res/layout/fragment_1.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_3.xml" value="0.3453703703703704" />
         <entry key="app/src/main/res/layout/fragment_first.xml" value="0.262037037037037" />
         <entry key="app/src/main/res/layout/fragment_second.xml" value="0.262037037037037" />
         <entry key="app/src/main/res/layout/information.xml" value="0.2611111111111111" />
+        <entry key="app/src/main/res/layout/recycler_item.xml" value="0.2611111111111111" />
         <entry key="app/src/main/res/layout/subway_click.xml" value="0.25" />
         <entry key="app/src/main/res/menu/bnv.xml" value="0.28923076923076924" />
         <entry key="app/src/main/res/menu/click.xml" value="0.2611111111111111" />
