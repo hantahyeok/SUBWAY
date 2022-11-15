@@ -9,7 +9,7 @@
     app:strokeColor="@color/black"
     app:strokeWidth="2dp"
     app:cardCornerRadius="16dp"
-    android:visibility="invisible"
+    android:visibility="visible"
     >
 
     <LinearLayout
@@ -23,10 +23,12 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="vertical">
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="60dp"
-                android:src="@drawable/ballot"/>
+                android:src="@drawable/ballot" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"

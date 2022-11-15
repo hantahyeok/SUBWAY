@@ -1,6 +1,7 @@
 package com.hde.subway
 
 import android.content.Context
+import android.opengl.Visibility
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -12,17 +13,17 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.Toast
+import androidx.core.view.isInvisible
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.findFragment
 import com.bumptech.glide.Glide
 import com.hde.subway.Coordinate
 import com.hde.subway.databinding.Fragment1Binding
+import java.util.*
 
 class Fragment1 : Fragment(){
 
     lateinit var binding: Fragment1Binding
-    lateinit var clickCoordinate:Coordinate
-
-    lateinit var close:Coordinate
 
     var xcoord = 0
     var ycoord = 0
@@ -71,39 +72,50 @@ class Fragment1 : Fragment(){
 
         // 좌표 구하는
         binding.pv.setOnPhotoTapListener { view, x, y ->
-
             var myx= (x * 10000).toInt()
             var myy= (y * 10000).toInt()
 
-            var minimum=1000000000.0
-            var station=""
+            Log.i("aaa", ("$x , $y"))
 
-            stationcoordinate.forEach { list ->
-                list.forEach {
-                    xcoord= (it.value.x * 10000).toInt()
-                    ycoord= (it.value.y * 10000).toInt()
+            if(myx > myx-100 && myx < myx+100 && myy > myy-100 && myy < myy+100) {
 
-                    var xkey= (myx - xcoord).toDouble()
-                    var ykey= (myy - ycoord).toDouble()
+                var minimum=1000000000.0
+                var station=""
 
-                    //사용자 터치 위치와 역사이의 거리
-                    var distance:Double= Math.pow(xkey, 2.0) + Math.pow(ykey, 2.0)
+                var distance:Double= 50000.0
 
-                    if(distance < minimum ){
-                        minimum = distance
-                        station = it.key
+                stationcoordinate.forEach { list ->
+                    list.forEach {
+                        xcoord= (it.value.x * 10000).toInt()
+                        ycoord= (it.value.y * 10000).toInt()
+
+                        var xkey= (myx - xcoord).toDouble()
+                        var ykey= (myy - ycoord).toDouble()
+
+                        //사용자 터치 위치와 역사이의 거리
+                        distance= Math.pow(xkey, 2.0) + Math.pow(ykey, 2.0)
+                        distance=Math.sqrt(distance)
+
+                        if( distance < minimum ){
+                            minimum = distance
+                            station = it.key
+                        }
                     }
                 }
-            }
-            Log.i("bbb", "$myx ")
-            Toast.makeText(requireContext(), "$station", Toast.LENGTH_SHORT).show()
-            if(myx > xcoord-100 && myx < xcoord+100 && myy > ycoord-100 && myy < ycoord+100) {
+                Log.i("hhh", distance.toString())
+                if(minimum < 100.0){
+                    Toast.makeText(requireContext(), "$station", Toast.LENGTH_SHORT).show()
+                    //클릭시 말풍선 뜨게 해야됨
+                    binding.include.click.visibility=View.VISIBLE
+                }else{
+                    binding.include.click.visibility=View.GONE
+                }
             }
 
-        }
+        }//photoview click..
 
         return binding.root
-    }
+    }//onCreate....
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
