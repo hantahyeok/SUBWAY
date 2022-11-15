@@ -8,6 +8,7 @@
     android:layout_height="match_parent">
 
   <androidx.appcompat.widget.Toolbar
+      android:id="@+id/tb"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:background="@color/brand"
@@ -17,6 +18,7 @@
       />
 
   <RelativeLayout
+      android:id="@+id/map_view"
       android:layout_width="match_parent"
       android:layout_height="match_parent"/>
 

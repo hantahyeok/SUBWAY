@@ -1,19 +1,43 @@
 package com.hde.subway
 
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.hde.subway.R
-import androidx.navigation.ui.AppBarConfiguration
-import android.view.LayoutInflater
-import android.view.ViewGroup
-import androidx.navigation.fragment.NavHostFragment
+import android.os.PersistableBundle
+import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import com.hde.subway.databinding.ActivityExitBinding
+import com.kakao.util.maps.helper.Utility
+import net.daum.mf.map.api.MapPoint
+import net.daum.mf.map.api.MapView
 
 class activity_exit : AppCompatActivity() {
-    private val appBarConfiguration: AppBarConfiguration? = null
-    private val binding: ActivityExitBinding? = null
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+
+    val binding:ActivityExitBinding by lazy { ActivityExitBinding.inflate(layoutInflater) }
+
+    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
+        super.onCreate(savedInstanceState, persistentState)
+        setContentView(binding.root)
+
+        // 키 해시값을 얻어오는 기능을 가진 클래스에게 디버그용 키해시값 얻어오기
+        val keyHash = Utility.getKeyHash(this)
+        Log.d("et", keyHash)
+
+        binding.tb.setNavigationOnClickListener { finish() }
+
+        var mapView= MapView(this)
+        val mapViewContainer = binding.mapView
+        mapViewContainer.addView(mapView)
+
+        // 중심점 변경
+
+        // 중심점 변경
+        //mapView.setMapCenterPoint(MapPoint.mapPointWithGeoCoord(37.53737528, 127.00557633), true)
+
+        mapView.setZoomLevel(7, true)
+        mapView.zoomIn(true)
+        mapView.zoomOut(true)
+
+
     }
+
 }
