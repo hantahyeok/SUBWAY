@@ -12,7 +12,7 @@ class EditActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-
+        binding.tb.setNavigationOnClickListener { finish() }
 
     }
 }

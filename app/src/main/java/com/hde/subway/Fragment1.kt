@@ -1,6 +1,7 @@
 package com.hde.subway
 
 import android.content.Context
+import android.content.Intent
 import android.opengl.Visibility
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -106,6 +107,36 @@ class Fragment1 : Fragment(){
                     Toast.makeText(requireContext(), "$station", Toast.LENGTH_SHORT).show()
                     //클릭시 말풍선 뜨게 해야됨
                     binding.include.click.visibility=View.VISIBLE
+                    binding.include.clock.setOnClickListener(object : View.OnClickListener{
+                        override fun onClick(p0: View?) {
+                            val intent = Intent(getActivity(), SubwayComeActivity::class.java)
+                            startActivity(intent)
+                        }
+
+                    })
+
+                    binding.include.exit.setOnClickListener(object : View.OnClickListener{
+                        override fun onClick(p0: View?) {
+                            val intent = Intent(getActivity(), ExitActivity::class.java)
+                            startActivity(intent)
+                        }
+
+                    })
+
+                    binding.include.information.setOnClickListener(object : View.OnClickListener{
+                        override fun onClick(p0: View?) {
+                            //val intent = Intent(getActivity(), SubwayComeActivity::class.java)
+                            //startActivity(intent)
+                        }
+
+                    })
+
+                    binding.include.favorite.setOnClickListener(object : View.OnClickListener{
+                        override fun onClick(p0: View?) {
+
+                        }
+
+                    })
 
 
                 }else{

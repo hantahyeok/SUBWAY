@@ -10,7 +10,7 @@ import com.kakao.util.maps.helper.Utility
 import net.daum.mf.map.api.MapPoint
 import net.daum.mf.map.api.MapView
 
-class activity_exit : AppCompatActivity() {
+class ExitActivity : AppCompatActivity() {
 
     val binding:ActivityExitBinding by lazy { ActivityExitBinding.inflate(layoutInflater) }
 

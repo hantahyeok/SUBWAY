@@ -33,7 +33,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity_exit"
+            android:name=".ExitActivity"
             android:exported="false"
             android:label="@string/title_activity_exit"
             android:theme="@style/Theme.SUBWAY.NoActionBar" />
