@@ -1,8 +1,10 @@
 package com.hde.subway
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.widget.Toast
 import android.widget.Toolbar
 import com.hde.subway.databinding.ActivitySubwayComeBinding
 
@@ -15,6 +17,11 @@ class SubwayComeActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.tb.setNavigationOnClickListener { finish() }
+
+        var intent= getIntent()
+        var station= intent.getStringExtra("aaa")
+
+        Toast.makeText(this, "$station", Toast.LENGTH_SHORT).show()
 
     }
 }
