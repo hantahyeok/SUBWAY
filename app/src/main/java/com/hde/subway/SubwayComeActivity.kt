@@ -19,7 +19,7 @@ class SubwayComeActivity : AppCompatActivity() {
         binding.tb.setNavigationOnClickListener { finish() }
 
         var intent= getIntent()
-        var station= intent.getStringExtra("aaa")
+        var station= intent.getStringExtra("station")
 
         Toast.makeText(this, "$station", Toast.LENGTH_SHORT).show()
 

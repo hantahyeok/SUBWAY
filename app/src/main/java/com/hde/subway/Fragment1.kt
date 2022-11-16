@@ -109,7 +109,7 @@ class Fragment1 : Fragment(){
                     binding.include.clock.setOnClickListener(object : View.OnClickListener{
                         override fun onClick(p0: View?) {
                             val intent = Intent(getActivity(), SubwayComeActivity::class.java)
-                            intent.putExtra("aaa", station)
+                            intent.putExtra("station", station)
                             startActivity(intent)
                         }
 
@@ -117,13 +117,14 @@ class Fragment1 : Fragment(){
 
                     binding.include.exit.setOnClickListener{
                         var intent=Intent(activity, ExitActivity::class.java)
+                        intent.putExtra("station", station)
                         startActivity(intent)
                     }
 
                     binding.include.information.setOnClickListener(object : View.OnClickListener{
                         override fun onClick(p0: View?) {
-                            //val intent = Intent(getActivity(), SubwayComeActivity::class.java)
-                            //startActivity(intent)
+                            val intent = Intent(getActivity(), SubwayComeActivity::class.java)
+                            startActivity(intent)
                         }
 
                     })
