@@ -2,6 +2,7 @@ package com.hde.subway
 
 
 import android.content.Intent
+import android.location.Address
 import android.location.Geocoder
 import android.os.Bundle
 import android.os.PersistableBundle
@@ -28,6 +29,15 @@ class ExitActivity : AppCompatActivity() {
 
         binding.tb.setNavigationOnClickListener { finish() }
 
+        var geocoder= Geocoder(this, Locale.KOREAN)
+
+        var stationName = geocoder.getFromLocationName(station, 1)
+        Log.i("tahyeok", stationName.toString())
+
+        //val xcoord= stationName.lati
+
+
+
         var mapView = MapView(this)
         val mapViewContainer = binding.mapView
         mapViewContainer.addView(mapView)
@@ -37,6 +47,5 @@ class ExitActivity : AppCompatActivity() {
         mapView.zoomOut(true)
 
     }
-
 
 }
