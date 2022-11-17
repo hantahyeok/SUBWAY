@@ -43,8 +43,6 @@ class SubwayComeActivity : AppCompatActivity() {
         var serverUrl = "http://openapi.seoul.go.kr:8088/" +
                 apiKey + "/json/" + "SearchSTNBySubwayLineInfo/1/5/%20/" + station
 
-        Log.i("tahyeokUrl", serverUrl)
-
         Thread {
             kotlin.run {
                 var url = URL(serverUrl)
@@ -54,11 +52,16 @@ class SubwayComeActivity : AppCompatActivity() {
                 var gson = Gson()
                 var stationLineNum:StationLineNum = gson.fromJson(inputStreamReader, StationLineNum::class.java)
 
-                //Log.i("tahyeok", stationLineNum.SearchSTNBySubwayLineInfo.row[0].LINE_NUM)
+                var list:MutableList<String> = mutableListOf()
+
 
                 stationLineNum.SearchSTNBySubwayLineInfo.row.forEach {
-                    var list:List<String> = it
+                if( station == it.STATION_NM ) {
+                    list.add(it.LINE_NUM)
                 }
+                }
+
+                Log.i("tahyeok", list.toString())
 
             }
         }.start()
