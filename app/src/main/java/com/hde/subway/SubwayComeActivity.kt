@@ -32,7 +32,7 @@ class SubwayComeActivity : AppCompatActivity() {
         var intent = getIntent()
         station = intent.getStringExtra("station")
 
-        binding.tv.text = "$station"
+        binding.tv.text = station
 
         stationNum()
 
@@ -41,26 +41,27 @@ class SubwayComeActivity : AppCompatActivity() {
     fun stationNum() {
         var apiKey = "50794a697674616839374849626e77"
         var serverUrl = "http://openapi.seoul.go.kr:8088/" +
-                apiKey + "/json/" + "SearchSTNBySubwayLineInfo/1/5//" +
-                station
+                apiKey + "/json/" + "SearchSTNBySubwayLineInfo/1/5/%20/" + station
 
-        var thread = Thread() {
+        Log.i("tahyeokUrl", serverUrl)
+
+        Thread {
             kotlin.run {
                 var url = URL(serverUrl)
                 var inputStream = url.openStream()
                 var inputStreamReader = InputStreamReader(inputStream)
 
                 var gson = Gson()
-                var stationLineNum = gson.fromJson(inputStreamReader, StationLineNum::class.java)
+                var stationLineNum:StationLineNum = gson.fromJson(inputStreamReader, StationLineNum::class.java)
 
-                stationLineNum.SearchSTNBySubwayLineInfo.row.let {
-                    it.forEach {
-                        Log.i("TAG-result", it.LINE_NUM)
+                //Log.i("tahyeok", stationLineNum.SearchSTNBySubwayLineInfo.row[0].LINE_NUM)
+
+                stationLineNum.SearchSTNBySubwayLineInfo.row.forEach {
+                    Log.i("tahyeok", it.LINE_NUM + "/" + it.STATION_NM)
+                    runOnUiThread {
+                        Toast.makeText(this, "${it.LINE_NUM}", Toast.LENGTH_SHORT).show()
                     }
                 }
-//                    runOnUiThread {
-//                        Toast.makeText(this@SubwayComeActivity, "${it.SearchSTNBySubwayLineInfo.row.LINE_NUM}", Toast.LENGTH_SHORT).show() }
-//                }.start()
 
             }
         }.start()
