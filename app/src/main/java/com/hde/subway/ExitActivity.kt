@@ -18,6 +18,9 @@ import java.util.*
 
 class ExitActivity : AppCompatActivity() {
 
+    var xcoord = 0.0
+    var ycoord = 0.0
+
     val binding:ActivityExitBinding by lazy { ActivityExitBinding.inflate(layoutInflater) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,17 +35,17 @@ class ExitActivity : AppCompatActivity() {
         var geocoder= Geocoder(this, Locale.KOREAN)
 
         var stationName = geocoder.getFromLocationName(station, 1)
-        Log.i("tahyeok", stationName.toString())
 
-        //val xcoord= stationName.lati
-
-
+        xcoord= stationName[0].latitude
+        ycoord= stationName[0].longitude
 
         var mapView = MapView(this)
         val mapViewContainer = binding.mapView
         mapViewContainer.addView(mapView)
 
-        mapView.setZoomLevel(1, true)
+        // 중심점 변경 + 줌 레벨 변경
+        mapView.setMapCenterPointAndZoomLevel(MapPoint.mapPointWithGeoCoord(xcoord,ycoord), 1, true)
+
         mapView.zoomIn(true)
         mapView.zoomOut(true)
 

@@ -117,7 +117,7 @@ class Fragment1 : Fragment(){
 
                     binding.include.exit.setOnClickListener{
                         var intent=Intent(activity, ExitActivity::class.java)
-                        intent.putExtra("station", station)
+                        intent.putExtra("station", station+"역")
                         startActivity(intent)
                     }
 
