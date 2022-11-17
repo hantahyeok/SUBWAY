@@ -57,10 +57,7 @@ class SubwayComeActivity : AppCompatActivity() {
                 //Log.i("tahyeok", stationLineNum.SearchSTNBySubwayLineInfo.row[0].LINE_NUM)
 
                 stationLineNum.SearchSTNBySubwayLineInfo.row.forEach {
-                    Log.i("tahyeok", it.LINE_NUM + "/" + it.STATION_NM)
-                    runOnUiThread {
-                        Toast.makeText(this, "${it.LINE_NUM}", Toast.LENGTH_SHORT).show()
-                    }
+                    var list:List<String> = it
                 }
 
             }
