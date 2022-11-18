@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.widget.Toast
 import android.widget.Toolbar
+import com.google.android.material.tabs.TabLayoutMediator
 import com.google.gson.Gson
 import com.hde.subway.databinding.ActivitySubwayComeBinding
 import retrofit2.http.Url
@@ -15,13 +16,12 @@ import java.net.URL
 
 class SubwayComeActivity : AppCompatActivity() {
 
-    val binding: ActivitySubwayComeBinding by lazy {
-        ActivitySubwayComeBinding.inflate(
-            layoutInflater
-        )
-    }
+    val binding: ActivitySubwayComeBinding by lazy { ActivitySubwayComeBinding.inflate(layoutInflater) }
 
+    var list:MutableList<String> = mutableListOf()
+    //var tablist:MutableList<String> = mutableListOf()
     var station: String? = ""
+    //lateinit var adapter: MyPager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,7 +34,16 @@ class SubwayComeActivity : AppCompatActivity() {
 
         binding.tv.text = station
 
-        stationNum()
+        TODO("여기부터")
+        //adapter = MyPagerAdapter()
+
+
+        stationNum() //지하철 호선 알아내는
+        var mediator:TabLayoutMediator= TabLayoutMediator(binding.tabbar,binding.pager,TabLayoutMediator.TabConfigurationStrategy { tab, position ->
+            tab.setText(list[position])
+        })
+
+        mediator.attach()
 
     }
 
@@ -52,16 +61,11 @@ class SubwayComeActivity : AppCompatActivity() {
                 var gson = Gson()
                 var stationLineNum:StationLineNum = gson.fromJson(inputStreamReader, StationLineNum::class.java)
 
-                var list:MutableList<String> = mutableListOf()
-
-
                 stationLineNum.SearchSTNBySubwayLineInfo.row.forEach {
                 if( station == it.STATION_NM ) {
                     list.add(it.LINE_NUM)
                 }
                 }
-
-                Log.i("tahyeok", list.toString())
 
             }
         }.start()
