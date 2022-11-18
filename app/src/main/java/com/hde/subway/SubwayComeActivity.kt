@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.widget.Toast
 import android.widget.Toolbar
+import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayoutMediator
 import com.google.gson.Gson
 import com.hde.subway.databinding.ActivitySubwayComeBinding
@@ -18,10 +19,11 @@ class SubwayComeActivity : AppCompatActivity() {
 
     val binding: ActivitySubwayComeBinding by lazy { ActivitySubwayComeBinding.inflate(layoutInflater) }
 
+    lateinit var stationLineNum : StationLineNum
     var list:MutableList<String> = mutableListOf()
-    //var tablist:MutableList<String> = mutableListOf()
+//    var tablist:MutableList<String> = mutableListOf()
     var station: String? = ""
-    //lateinit var adapter: MyPager
+    lateinit var adapter: MyPagerAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,16 +36,9 @@ class SubwayComeActivity : AppCompatActivity() {
 
         binding.tv.text = station
 
-        TODO("여기부터")
-        //adapter = MyPagerAdapter()
-
-
         stationNum() //지하철 호선 알아내는
-        var mediator:TabLayoutMediator= TabLayoutMediator(binding.tabbar,binding.pager,TabLayoutMediator.TabConfigurationStrategy { tab, position ->
-            tab.setText(list[position])
-        })
 
-        mediator.attach()
+
 
     }
 
@@ -59,16 +54,31 @@ class SubwayComeActivity : AppCompatActivity() {
                 var inputStreamReader = InputStreamReader(inputStream)
 
                 var gson = Gson()
-                var stationLineNum:StationLineNum = gson.fromJson(inputStreamReader, StationLineNum::class.java)
+                stationLineNum= gson.fromJson(inputStreamReader, StationLineNum::class.java)
 
                 stationLineNum.SearchSTNBySubwayLineInfo.row.forEach {
-                if( station == it.STATION_NM ) {
-                    list.add(it.LINE_NUM)
+                    if( station == it.STATION_NM ) {
+                        list.add(it.LINE_NUM)
+                    }
                 }
+
+
+                runOnUiThread {
+                    binding.pager.adapter= MyPagerAdapter(this, list)
+                    var mediator:TabLayoutMediator= TabLayoutMediator(binding.tabbar,binding.pager,TabLayoutMediator.TabConfigurationStrategy { tab, position ->
+                        tab.text = list[position]
+                    })
+
+                    mediator.attach()
                 }
 
             }
         }.start()
+
+
+
+//        Toast.makeText(this@SubwayComeActivity, "${list}", Toast.LENGTH_SHORT).show()
+//        Toast.makeText(this@SubwayComeActivity, "${list[0]}", Toast.LENGTH_SHORT).show()
 
     }
 }
