@@ -57,7 +57,7 @@ class SubwayComeActivity : AppCompatActivity() {
                 stationLineNum= gson.fromJson(inputStreamReader, StationLineNum::class.java)
 
                 stationLineNum.SearchSTNBySubwayLineInfo.row.forEach {
-                    if( station == it.STATION_NM ) {
+                    if( station.equals(it.STATION_NM) ) {
                         list.add(it.LINE_NUM)
                     }
                 }

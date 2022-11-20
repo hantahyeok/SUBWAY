@@ -112,7 +112,6 @@ class Fragment1 : Fragment(){
                             intent.putExtra("station", station)
                             startActivity(intent)
                         }
-
                     })
 
                     binding.include.exit.setOnClickListener{

@@ -8,6 +8,8 @@ class MyPagerAdapter(fragmentActivity:FragmentActivity, list:MutableList<String>
 
     var fragments = ArrayList<Fragment>()
 
+    // TODO: 여기 어댑터 다시 코드 읽기
+
     init {
         list.forEach {
             fragments.add(Tab1Fragment())
