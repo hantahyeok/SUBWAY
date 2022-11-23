@@ -17,7 +17,6 @@ import android.widget.Toast
 import androidx.core.view.isInvisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.findFragment
-import com.bumptech.glide.Glide
 import com.hde.subway.Coordinate
 import com.hde.subway.databinding.Fragment1Binding
 import java.util.*

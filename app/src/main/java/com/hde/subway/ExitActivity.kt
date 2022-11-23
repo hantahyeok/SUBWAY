@@ -27,10 +27,11 @@ class ExitActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+        binding.tb.setNavigationOnClickListener { finish() }
+
         var intent= getIntent()
         var station= intent.getStringExtra("station")
-
-        binding.tb.setNavigationOnClickListener { finish() }
+        Toast.makeText(this, "$station", Toast.LENGTH_SHORT).show()
 
         var geocoder= Geocoder(this, Locale.KOREAN)
 
