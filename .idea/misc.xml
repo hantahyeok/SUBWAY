@@ -3,6 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/hanta/AndroidStudioProjects/SUBWAY/app/src/main/res/drawable/intro_bg.xml" value="0.1185" />
+        <entry key="..\:/Users/hanta/AndroidStudioProjects/SUBWAY/app/src/main/res/drawable/subway_click_bg.xml" value="0.228" />
+        <entry key="..\:/Users/hanta/AndroidStudioProjects/SUBWAY/app/src/main/res/drawable/subwaycome_bg.xml" value="0.146" />
+        <entry key="..\:/Users/hanta/AndroidStudioProjects/SUBWAY/app/src/main/res/drawable/tails.xml" value="0.228" />
+        <entry key="..\:/Users/hanta/AndroidStudioProjects/SUBWAY/app/src/main/res/layout/activity_intro.xml" value="0.17806484295845998" />
+        <entry key="..\:/Users/hanta/AndroidStudioProjects/SUBWAY/app/src/main/res/layout/activity_subway_come.xml" value="0.17806484295845998" />
+        <entry key="..\:/Users/hanta/AndroidStudioProjects/SUBWAY/app/src/main/res/layout/fragment_1.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/hanta/AndroidStudioProjects/SUBWAY/app/src/main/res/layout/fragment_tab1.xml" value="0.5" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2" />
         <entry key="app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.125" />
         <entry key="app/src/main/res/drawable/ic_baseline_close_24.xml" value="0.2" />

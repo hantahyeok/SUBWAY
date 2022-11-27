@@ -10,7 +10,7 @@ class MyPagerAdapter(fragmentActivity:FragmentActivity, list:MutableList<String>
 
     init {
         list.forEach {
-            fragments.add(Tab1Fragment())
+            fragments.add(Tab1Fragment(it))
         }
     }
 

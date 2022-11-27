@@ -111,9 +111,11 @@ class Fragment1 : Fragment(){
 
                     binding.include.clock.setOnClickListener(object : View.OnClickListener{
                         override fun onClick(p0: View?) {
+
                             val intent = Intent(getActivity(), SubwayComeActivity::class.java)
                             intent.putExtra("station", station)
                             startActivity(intent)
+
                         }
                     })
 
