@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Tab1Fragment"
-    android:background="@drawable/subwaycome_bg"
     android:layout_margin="6dp"
     android:padding="8dp">
 
