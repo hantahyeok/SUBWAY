@@ -3,14 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/hanta/AndroidStudioProjects/SUBWAY/app/src/main/res/drawable/intro_bg.xml" value="0.1185" />
-        <entry key="..\:/Users/hanta/AndroidStudioProjects/SUBWAY/app/src/main/res/drawable/subway_click_bg.xml" value="0.228" />
-        <entry key="..\:/Users/hanta/AndroidStudioProjects/SUBWAY/app/src/main/res/drawable/subwaycome_bg.xml" value="0.146" />
-        <entry key="..\:/Users/hanta/AndroidStudioProjects/SUBWAY/app/src/main/res/drawable/tails.xml" value="0.228" />
-        <entry key="..\:/Users/hanta/AndroidStudioProjects/SUBWAY/app/src/main/res/layout/activity_intro.xml" value="0.17806484295845998" />
-        <entry key="..\:/Users/hanta/AndroidStudioProjects/SUBWAY/app/src/main/res/layout/activity_subway_come.xml" value="0.17806484295845998" />
-        <entry key="..\:/Users/hanta/AndroidStudioProjects/SUBWAY/app/src/main/res/layout/fragment_1.xml" value="0.36614583333333334" />
-        <entry key="..\:/Users/hanta/AndroidStudioProjects/SUBWAY/app/src/main/res/layout/fragment_tab1.xml" value="0.5" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2" />
         <entry key="app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.125" />
         <entry key="app/src/main/res/drawable/ic_baseline_close_24.xml" value="0.2" />
@@ -33,7 +25,7 @@
         <entry key="app/src/main/res/layout/activity_main2.xml" value="0.3388888888888889" />
         <entry key="app/src/main/res/layout/activity_setting.xml" value="0.24381625441696114" />
         <entry key="app/src/main/res/layout/activity_subway.xml" value="0.11203703703703703" />
-        <entry key="app/src/main/res/layout/activity_subway_come.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_subway_come.xml" value="0.22760681152343762" />
         <entry key="app/src/main/res/layout/content_activity_exit.xml" value="0.262037037037037" />
         <entry key="app/src/main/res/layout/fragment_1.xml" value="0.1942675159235669" />
         <entry key="app/src/main/res/layout/fragment_2.xml" value="0.27546296296296297" />

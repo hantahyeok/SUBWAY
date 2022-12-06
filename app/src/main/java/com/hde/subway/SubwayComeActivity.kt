@@ -21,7 +21,6 @@ class SubwayComeActivity : AppCompatActivity() {
 
     lateinit var stationLineNum : StationLineNum
     var list:MutableList<String> = mutableListOf()
-//    var tablist:MutableList<String> = mutableListOf()
     var station: String? = ""
     lateinit var adapter: MyPagerAdapter
 
@@ -31,14 +30,15 @@ class SubwayComeActivity : AppCompatActivity() {
 
         binding.tb.setNavigationOnClickListener { finish() }
 
+        adapter= MyPagerAdapter(this, list)
+        binding.pager.adapter=adapter
+
         var intent = getIntent()
         station = intent.getStringExtra("station")
 
         binding.tv.text = station
 
         stationNum() //지하철 호선 알아내는
-
-
 
     }
 
@@ -74,11 +74,6 @@ class SubwayComeActivity : AppCompatActivity() {
 
             }
         }.start()
-
-
-
-//        Toast.makeText(this@SubwayComeActivity, "${list}", Toast.LENGTH_SHORT).show()
-//        Toast.makeText(this@SubwayComeActivity, "${list[0]}", Toast.LENGTH_SHORT).show()
 
     }
 }

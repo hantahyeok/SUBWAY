@@ -13,9 +13,6 @@ class Tab1Fragment(list: String) : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        stationCome() //지하철 시간
-        var intent = Intent.getIntent(station)
-
         return inflater.inflate(R.layout.fragment_tab1, container, false)
     }
 
