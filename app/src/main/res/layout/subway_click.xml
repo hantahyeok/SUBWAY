@@ -18,6 +18,7 @@
         android:orientation="horizontal"
         android:padding="8dp">
 
+
         <LinearLayout
             android:id="@+id/clock"
             android:layout_width="0dp"

@@ -35,10 +35,10 @@ class ExitActivity : AppCompatActivity() {
 
         var geocoder= Geocoder(this, Locale.KOREAN)
 
-        var stationName = geocoder.getFromLocationName(station, 1)
+        var stationName = station?.let { geocoder.getFromLocationName(it, 1) }
 
-        xcoord= stationName[0].latitude
-        ycoord= stationName[0].longitude
+//        xcoord= stationName[0].latitude
+//        ycoord= stationName[0].longitude
 
         var mapView = MapView(this)
         val mapViewContainer = binding.mapView

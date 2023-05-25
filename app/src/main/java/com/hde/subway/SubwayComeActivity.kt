@@ -17,10 +17,14 @@ import java.net.URL
 
 class SubwayComeActivity : AppCompatActivity() {
 
-    val binding: ActivitySubwayComeBinding by lazy { ActivitySubwayComeBinding.inflate(layoutInflater) }
+    val binding: ActivitySubwayComeBinding by lazy {
+        ActivitySubwayComeBinding.inflate(
+            layoutInflater
+        )
+    }
 
-    lateinit var stationLineNum : StationLineNum
-    var list:MutableList<String> = mutableListOf()
+    lateinit var stationLineNum: StationLineNum
+    var list: MutableList<String> = mutableListOf()
     var station: String? = ""
     lateinit var adapter: MyPagerAdapter
 
@@ -30,8 +34,8 @@ class SubwayComeActivity : AppCompatActivity() {
 
         binding.tb.setNavigationOnClickListener { finish() }
 
-        adapter= MyPagerAdapter(this, list)
-        binding.pager.adapter=adapter
+        adapter = MyPagerAdapter(this, list)
+        binding.pager.adapter = adapter
 
         var intent = getIntent()
         station = intent.getStringExtra("station")
@@ -54,26 +58,28 @@ class SubwayComeActivity : AppCompatActivity() {
                 var inputStreamReader = InputStreamReader(inputStream)
 
                 var gson = Gson()
-                stationLineNum= gson.fromJson(inputStreamReader, StationLineNum::class.java)
+                stationLineNum = gson.fromJson(inputStreamReader, StationLineNum::class.java)
 
                 stationLineNum.SearchSTNBySubwayLineInfo.row.forEach {
-                    if( station.equals(it.STATION_NM) ) {
+                    if (station.equals(it.STATION_NM)) {
                         list.add(it.LINE_NUM)
                     }
                 }
 
 
                 runOnUiThread {
-                    binding.pager.adapter= MyPagerAdapter(this, list)
-                    var mediator:TabLayoutMediator= TabLayoutMediator(binding.tabbar,binding.pager,TabLayoutMediator.TabConfigurationStrategy { tab, position ->
-                        tab.text = list[position]
-                    })
+                    binding.pager.adapter = MyPagerAdapter(this, list)
+                    var mediator: TabLayoutMediator = TabLayoutMediator(
+                        binding.tabbar,
+                        binding.pager,
+                        TabLayoutMediator.TabConfigurationStrategy { tab, position ->
+                            tab.text = list[position]
+                        })
 
                     mediator.attach()
                 }
 
             }
-        }.start()
-
+        }
     }
 }
